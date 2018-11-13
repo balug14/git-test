@@ -24,24 +24,24 @@ pipeline {
                         }
         }
         stage('Four') {
-                parallel {
-                        stage('Unit Test') {
+              //  parallel {
+              //          stage('Unit Test') {
                                 steps{
                                         echo "Running the unit test..."
                                 }
                         }
                         stage('Integration test') {
-                        agent {
-                                docker {
-                                        reuseNode false
-					image 'ubuntu'
-                                        }
-			}
-				steps {
-					echo 'Running the integration test..'
-				}
-                               
-			}  }
+                //        agent {
+                //                docker {
+                //                        reuseNode false
+		//			image 'ubuntu'
+                //                        }
+	//		}
+	//			steps {
+	//				echo 'Running the integration test..'
+	//			}
+        //                       
+	//		}  }
         }
     }
 }
